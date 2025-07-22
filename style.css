@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: monospace;
+    background-color: #e67e88;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    user-select: none;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* gap: 30px; */
+    padding: 0 16px;
+}
+
+h2 {
+    font-size: 3em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.theme {
+    display: flex;
+    margin: 30px 0;
+}
+
+h3 , select {
+    font-size: 2em;
+    color: #fff;
+    letter-spacing: 0.1em;
+}
+
+select {
+    border: 2px solid #ed97a3;
+}
+
+button {
+    padding: 15px 20px;
+    width: 80%;
+    color: #ed97a3;
+    background-color: #fff;
+    border: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    margin: 30px 0;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #009881;
+    color: #fff;
+}
+
+.game {
+    width: 430px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+
+.item {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    font-size: 3em;
+    transform: rotateY(180deg);
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #83585d;
+    transition: 0.2s;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+}
+
+.item.boxOpen {
+    transform: rotateY(0deg);
+}
+
+.boxOpen::after, .boxMatch::after {
+    transform: rotateY(180deg );
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+}
+
+footer a {
+    color: #fff;
+}
+
+footer a:hover {
+    color: #83585d;
+}
+
+@media(max-width: 464px) {
+    .game {
+    width: 350px;
+    height: 350px;
+    }
+
+    .item {
+    width: 80px;
+    height: 80px;
+    }
+}
+
+@media(max-width: 415px) {
+    .game {
+    width: 270px;
+    height: 270px;
+    }
+
+    .item {
+    width: 60px;
+    height: 60px;
+    }
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Memória</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>JOGO DA MEMÓRIA</h2>
+        <div class="theme">
+            <h3>Tema:</h3>
+            <select id="theme">
+                <option value="">Selecione</option>
+                <option value="princess">Princess</option>
+                <option value="japao">Japão</option>
+                <option value="valentine">Valentine</option>
+                <option value="animals">Animais</option>
+                <option value="disney">Disney</option>
+            </select>
+        </div>
+        <div class="game"></div>
+        <button class="reset" onclick="window.location.reload()">reset game</button>
+        <footer>
+        Inspirado no projeto original da <a href="https://web.dio.me/track/coding-future-front-end-do-zero">Dio</a>, desenvolvido por <a href="https://www.linkedin.com/in/larissakmnakamura/">Larissa Nakamura</a>.
+        </footer>
+    </div>
+    <script src="engine.js" defer></script>
+</body>
+</html>
