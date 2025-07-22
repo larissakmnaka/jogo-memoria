@@ -4,7 +4,6 @@
     outline: none;
     box-sizing: border-box;
     font-family: monospace;
-    background-color: #e67e88;
 }
 
 body {
@@ -13,6 +12,7 @@ body {
     align-items: center;
     min-height: 100vh;
     user-select: none;
+    background-color: #e67e88;
 }
 
 .container {
@@ -21,7 +21,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* gap: 30px; */
     padding: 0 16px;
 }
 
@@ -47,6 +46,11 @@ h3 , select {
 
 select {
     border: 2px solid #ed97a3;
+    background-color: transparent;
+}
+
+option {
+    background-color: #e67e88;
 }
 
 button {
